@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.cn/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.cn/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <style>
+        .lo {
+            /* 利用自己的样式覆盖原来额样式 */
+            width: 500px;
+            height: 50px;
+        }
+
+        .row [class^="col"] {
+            /* border: 1px solid red; */
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    123<button type="button" class="btn btn-success lo">（成功）Success</button>
+    布局容器：container 已经设置好宽度
+    <div class="container">123</div>
+    container-fluid：流式布局 百分比宽度；占据全部视口viewport容器 适合单独做移动端开发；
+    <div class="container-fluid">123</div>
+    <h4>栅格系统：也有人翻译网格系统，将页面划分为等宽的列，通过列数的定义来模块化页面布局</h4>
+    Bobtstrap 提供的是响应式。移动设备优先的流式栅格系统，随着屏幕尺寸增加，系统自动分为分为12列;
+    通过类前缀实现列的划分 ： 手机小于768超小 .col-xs- 平板 小平 大于等于768 col-sm- 中等大于等于992 col-md- 宽屏 大于等于1200 col-lg-
+    相加=12 占满container 宽度 小于12 占卜满 container 会有空白 大于12 多余的一列另起一行显示
+    每一列默认15px padding
+    <div class="container">1
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <!-- 列嵌套最好添加一个row 可以取消父元素的padding值 高度自动跟父元素一样高 -->
+                <div class="row">
+                    <div class="col-md-6">a</div>
+                    <div class="col-md-6">a</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="row">
+                    <!-- 偏移的份数是12-两个盒子的份数； -->
+                    <div class="col-md-4 ">b</div>
+                    <div class="col-md-4 col-md-offset-4">b</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <!-- 如果一个盒子 12-盒子份数 偏移结果的一半 -->
+                <div class="col-md-8 col-md-offset-2">c</div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="col-md-5 col-md-push-7">左</div>
+                <div class="col-md-7 col-md-pull-5">有</div>
+            </div>
+        </div>
+    </div>
+    lie列偏移。 col-md-offset-;<br>
+    列排序：.col-md-push- 推 左边到右边 .col-md-pull- 拉 右边向左边 改变顺序<br>
+    响应式工具： 。hidden-xs 超小屏 隐藏 hidden-sm 小平隐藏 hidden-md 中屏隐藏 hidden-lg 大屏隐藏
+    visible-xs 超小 显示 -sm 小屏显示 -md 中屏显示 -lg 大屏显示
+</body>
+
+</html>

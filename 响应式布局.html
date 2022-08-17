@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        .container {
+            width: 750px;
+            margin: 0 auto;
+        }
+
+        .container ul li {
+            float: left;
+            width: 93.75px;
+            height: 30px;
+            background-color: green;
+        }
+
+        @media screen and (max-width:767.0025px) {
+            .container {
+                width: 100%;
+            }
+
+            .container ul li {
+                width: 33.33%;
+            }
+        }
+
+        /*
+        @media screen and (min-width:768px) {
+            .container {
+                width: 750px;
+            }
+        }
+
+        @media screen and (min-width:992.0025px) {
+            .container {
+                width: 969.9975px;
+            }
+        }
+
+        @media screen and (min-width:1200px) {
+            .container {
+                width: 1170px;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    响应式布局的原理：使用媒体查询针对不同的宽度设备惊醒布局和样式设计，从而适配不同设备；
+    超小屏幕 xiaoyu 768px 小屏幕 平板：>= 768px~<992.0025px 中等屏幕：桌面：>=992.0025px ~<16rem 宽屏：>=1200px
+            需要一个父级元素作为布局容器/ 通过媒体查询修改容器大小再改变子元素的排列方式和大小，实现不同屏幕看到不同的布局样式变化<br>
+            响应式尺寸划分：超小屏幕小于768 宽度 100% 小屏幕大于等于768 宽度750 中等屏幕：大于等于992：宽度970 大屏幕：大于等于1200，屏幕宽度：1170px,
+            <div class="container">
+                <ul>
+                    <li>导航栏</li>
+                    <li>导航栏</li>
+                    <li>导航栏</li>
+                    <li>导航栏</li>
+                    <li>导航栏</li>
+                    <li>导航栏</li>
+                    <li>导航栏</li>
+                    <li>导航栏</li>
+                </ul>
+            </div>
+            bootstarp:前端框架：
+</body>
+
+</html>
